@@ -5,48 +5,48 @@ Voice-to-LLM Integration with FastAPI
 This is a simple FastAPI application that accepts voice prompts, transcribes them using OpenAI's Whisper model, and sends the transcribed text to a local LLM (GPT4All) or the OpenAI API for a response.
 Features
 
-    Upload an audio file containing a voice prompt.
-    Audio is transcribed to text using Whisper.
-    Transcribed text is processed by either:
-        GPT4All: A locally hosted GPT model.
-        OpenAI API: Uses OpenAI's GPT model for response generation.
+Upload an audio file containing a voice prompt.
+Audio is transcribed to text using Whisper.
+Transcribed text is processed by either:
+GPT4All: A framework enabling the use of locally hosted models.
+OpenAI API: Uses OpenAI's GPT model for response generation.
 
-Requirements
+## Requirements
 
 The following Python packages are required to run this application:
 
-    fastapi: Framework for building the API.
-    uvicorn: ASGI server to run the FastAPI app.
-    whisper: OpenAI's Whisper model for speech-to-text transcription.
-    gpt4all: Local GPT model for processing the transcribed text (optional).
-    openai: OpenAI's API client to interact with their GPT model.
-    python-dotenv: To load environment variables for API keys.
+fastapi: Framework for building the API.
+uvicorn: ASGI server to run the FastAPI app.
+whisper: OpenAI's Whisper model for speech-to-text transcription.
+gpt4all: Local GPT model for processing the transcribed text (optional).
+openai: OpenAI's API client to interact with their GPT model.
+python-dotenv: To load environment variables for API keys.
 
-Python Version
+### Python Version
 
 This project requires Python version 3.11.11.
 Installation
 
-    Clone the repository:
+### Clone the repository:
 
-git clone https://github.com/your-username/llmapi.git
-cd llmapi
+    git clone https://github.com/your-username/llmapi.git
+    cd llmapi
 
-Install dependencies:
+### Install dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-Set up environment variables:
+### Set up environment variables:
 
 You will need to set up your OpenAI API key as an environment variable:
 
     export OPENAI_API_KEY="your-openai-api-key"
 
-Running the Application
+## Running the Application
 
 To start the FastAPI app, use uvicorn:
 
-uvicorn main:app --reload
+    uvicorn main:app --reload
 
 This will start the server at http://127.0.0.1:8000.
 API Endpoints
@@ -77,15 +77,16 @@ Example response:
   "chatgpt_response": "Hi! How can I assist you today?"
 }
 
-Error Handling
+## Error Handling
 
 If any errors occur, the server will respond with an appropriate HTTP status code and message:
 
     500 Internal Server Error: General errors, such as issues with the Whisper transcription or OpenAI API connection.
 
-Clean Up
+## Clean Up
 
 Temporary audio files are removed after processing to prevent storage buildup.
-License
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
