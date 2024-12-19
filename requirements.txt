@@ -1,0 +1,11 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+gpt4all==2.8.2
+openai==1.58.1
+openai-whisper==20240930
+python-dotenv==0.21.0
+portaudio==19.7.0
+sounddevice==0.5.1
+soundfile==0.12.1
+torch==2.5.1
+
