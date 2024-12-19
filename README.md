@@ -1,6 +1,5 @@
 # llmapi
 a simple FastAPI to send voice prompts to a local LLM or the OpenAI API
-
 Voice-to-LLM Integration with FastAPI
 
 This is a simple FastAPI application that accepts voice prompts, transcribes them using OpenAI's Whisper model, and sends the transcribed text to a local LLM (GPT4All) or the OpenAI API for a response.
@@ -23,12 +22,15 @@ The following Python packages are required to run this application:
     openai: OpenAI's API client to interact with their GPT model.
     python-dotenv: To load environment variables for API keys.
 
+Python Version
+
+This project requires Python version 3.11.11.
 Installation
 
     Clone the repository:
 
-git clone https://github.com/your-username/voice-llm-fastapi.git
-cd voice-llm-fastapi
+git clone https://github.com/your-username/llmapi.git
+cd llmapi
 
 Install dependencies:
 
@@ -36,9 +38,9 @@ pip install -r requirements.txt
 
 Set up environment variables:
 
-    You will need to set up your OpenAI API key as an environment variable:
+You will need to set up your OpenAI API key as an environment variable:
 
-        export OPENAI_API_KEY="your-openai-api-key"
+    export OPENAI_API_KEY="your-openai-api-key"
 
 Running the Application
 
