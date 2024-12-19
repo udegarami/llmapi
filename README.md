@@ -22,6 +22,9 @@ gpt4all: Local GPT model for processing the transcribed text (optional).
 openai: OpenAI's API client to interact with their GPT model.
 python-dotenv: To load environment variables for API keys.
 
+### OS Version
+The project was tested on a Virtualbox VM running Ubuntu 24.04 LTS, it should also work on Windows and MacOS with minor changes.
+
 ### Python Version
 
 This project requires Python version 3.11.11.
