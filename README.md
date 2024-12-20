@@ -3,10 +3,12 @@ a simple FastAPI to send voice prompts to a local LLM or the OpenAI API
 Voice-to-LLM Integration with FastAPI
 
 This is a simple FastAPI application that accepts voice prompts, transcribes them using OpenAI's Whisper model, and sends the transcribed text to a local LLM (GPT4All) or the OpenAI API for a response.
+
 Features
 
 Upload an audio file containing a voice prompt.
 Audio is transcribed to text using Whisper.
+
 Transcribed text is processed by either:
 GPT4All: A framework enabling the use of locally hosted models.
 OpenAI API: Uses OpenAI's GPT model for response generation.
@@ -16,10 +18,15 @@ OpenAI API: Uses OpenAI's GPT model for response generation.
 The following Python packages are required to run this application:
 
 fastapi: Framework for building the API.
+
 uvicorn: ASGI server to run the FastAPI app.
-whisper: OpenAI's Whisper model for speech-to-text transcription.
-gpt4all: Local GPT model for processing the transcribed text (optional).
+
+openai-whisper: OpenAI's Whisper model for speech-to-text transcription.
+
+gpt4all: Local GPT model for processing the transcribed text.
+
 openai: OpenAI's API client to interact with their GPT model.
+
 python-dotenv: To load environment variables for API keys.
 
 ### OS Version
@@ -28,7 +35,8 @@ The project was tested on a Virtualbox VM running Ubuntu 24.04 LTS, it should al
 ### Python Version
 
 This project requires Python version 3.11.11.
-Installation
+
+## Installation
 
 ### Clone the repository:
 
