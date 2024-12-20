@@ -4,7 +4,7 @@ Voice-to-LLM Integration with FastAPI
 
 This is a simple FastAPI application that accepts voice prompts, transcribes them using OpenAI's Whisper model, and sends the transcribed text to a local LLM (GPT4All) or the OpenAI API for a response.
 
-Features
+## Features
 
 Upload an audio file containing a voice prompt.
 Audio is transcribed to text using Whisper.
@@ -34,7 +34,7 @@ The project was tested on a Virtualbox VM running Ubuntu 24.04 LTS, it should al
 
 ### Python Version
 
-This project requires Python version 3.11.11.
+This project was tested in Python version 3.11.11.
 
 ## Installation
 
@@ -77,16 +77,16 @@ Response:
 
 Example request:
 
-curl -X 'POST' \
-  'http://127.0.0.1:8000/process-audio/?model_choice=OpenAI%20API' \
-  -F 'file=@path_to_audio.wav'
+    curl -X 'POST' \
+      'http://127.0.0.1:8000/process-audio/?model_choice=OpenAI%20API' \
+      -F 'file=@path_to_audio.wav'
 
 Example response:
-
-{
-  "transcription": "Hello, how can I help you today?",
-  "chatgpt_response": "Hi! How can I assist you today?"
-}
+    
+    {
+      "transcription": "Hello, how can I help you today?",
+      "chatgpt_response": "Hi! How can I assist you today?"
+    }
 
 ## Error Handling
 
